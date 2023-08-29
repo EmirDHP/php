@@ -94,7 +94,7 @@
             <input type="text" class="form-control" name="Precio" value="<?php echo $fila['Precio']; ?>">
         </div>
 
-        <button type="submit" class="btn btn-primary">Agregar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
         <a href="../Index.php" class="btn btn-secondary">Regresar</a>
         </form>
     </div>

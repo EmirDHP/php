@@ -15,6 +15,29 @@
   <br>
 
     <div class="container">
+
+    <?php
+    // Verificar si se pasó el parámetro de guardado en la URL
+    if (isset($_GET['editado']) && $_GET['editado'] == 1) {
+        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                ¡Se ha editado el registro!.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>';
+    }
+    if (isset($_GET['guardado']) && $_GET['guardado'] == 2) {
+      echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+              ¡Se ha guardado el registro!.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>';
+    }
+    if (isset($_GET['eliminado']) && $_GET['eliminado'] == 3) {
+      echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+              ¡Se ha eliminado el registro!.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>';
+    }
+    ?>      
+
       <a href="Formularios/AgregarProducto.php" class="btn btn-primary">Agregar producto</a>
       </p>
 
@@ -77,5 +100,6 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
   </body>
 </html>

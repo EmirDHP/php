@@ -14,7 +14,8 @@ try {
     $sentencia->execute();
 
     // Redirecciona a la página principal u otra página después de la inserción
-    header("Location: ../Index.php");
+    //header("Location: ../Index.php");
+    header("Location: ../Index.php?eliminado=3");
     exit();
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();

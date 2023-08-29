@@ -22,7 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sentencia->execute();
 
         // Redirecciona a la página principal u otra página después de la inserción
-        header("Location: ../Index.php");
+        //header("Location: ../Index.php");
+        header("Location: ../Index.php?guardado=2");
         exit();
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
